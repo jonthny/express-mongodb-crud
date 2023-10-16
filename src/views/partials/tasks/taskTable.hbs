@@ -1,0 +1,40 @@
+{{! Lista de datos }}
+<table>
+  <thead>
+    <tr>
+      <th> No. </th>
+      <th> Título </th>
+      <th> Descripción</th>
+      <th> Operaciones </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+
+      <tr>
+        <td>
+          {{@index}}
+        </td>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{description}}
+        </td>
+        <td>
+          {{#if done}}
+            <a href="/toggleDone/:_id">Hecho</a>
+          {{else}}
+            <a href="/toggleDone/:_id">Sin hacer</a>
+          {{/if}}
+        </td>
+        <td>
+          <a href="/edit/{{_id}}">Modificar</a>
+        </td>
+        <td>
+          <a href="/delete/{{_id}}">Eliminar</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

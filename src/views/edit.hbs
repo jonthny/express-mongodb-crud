@@ -1,0 +1,18 @@
+{{!Formulario para modificación de datos}}
+
+<form action="/edit/{{task._id}}" method="POST">
+  <div>
+    <label for="title">Escriba un título</label>
+    <input type="text" name="title" value="{{task.title}}" placeholder="Título" id="title" />
+  </div>
+  <div>
+    <label for="description">Descripción</label>
+    <textarea
+      name="description"
+      id="description"
+      rows="3"
+      placeholder="Descripción"
+    >{{task.description}}</textarea>
+    <button>Guardar</button>
+  </div>
+</form>

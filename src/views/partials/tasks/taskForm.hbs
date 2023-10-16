@@ -1,0 +1,17 @@
+{{!Formulario para entrada de datos}}
+
+<form action="/tasks/add" method="POST">
+  <div>
+    <label for="title">Escriba un título</label>
+    <input type="text" name="title" placeholder="Título" id="title" />
+  </div>
+  <div>
+    <label for="description">Descripción</label>
+    <textarea
+      name="description"
+      placeholder="Descripción"
+      id="description"
+    ></textarea>
+    <button>Agregar</button>
+  </div>
+</form>
